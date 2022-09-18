@@ -23,23 +23,23 @@
 
     <div class="selection">
         
-            <div id="sel-1" class="selection-options">Pomodoro session<input class="input-time" type="time"></div>
-            <div id="sel-2" class="selection-options">Short Break time <input class="input-time" type="time"></div>
-            <div id="sel-3" class="selection-options">Long Break time <input class="input-time" type="time"></div>
+            <div  class="selection-options">Pomodoro session: <input id="sel-1" class="input-time" type="number" placeholder="0">mins</div>
+            <div  class="selection-options">Short Break time: <input id="sel-2"class="input-time" type="number" placeholder="0">mins</div>
+            <div  class="selection-options">Long Break time:  <input id="sel-3" class="input-time" type="number" placeholder="0">mins</div>
        
     </div>
     <div class="sub-button">
-        <button id="time-selection-button">Submit</button>
+        <button id="time-selection-button" onclick="assignTime()">Submit</button>
     </div>
 
 
     <div class="cardGroups">
-        <button class="button" id="pomodoroButton">
+        <button class="button" id="pomodoroButton" onclick="startPomodoro()">
             <div class="buttonHeadText">
                 Pomodoro session
                 <hr>
             </div>
-            START
+            <div id="pomodoro_button_text">START</div>
         </button>
         <button class="button" id='smallBreakButton'>
             <div class="buttonHeadText">

@@ -45,7 +45,7 @@ overflow-x: hidden;
     justify-items: center;
     justify-content: space-between;
     
-    margin-bottom: 12px;
+    margin-bottom: 25px;
     cursor: pointer;
     
 }
@@ -68,11 +68,11 @@ margin-bottom: 4vw;
      border-radius: 12px;
      font-family: 'Anton', sans-serif; 
      font-size: 4vw;
-     border-color: aliceblue;
+     border-color: rgb(122, 130, 138);
      
      margin-top: 20%;
      color: rgb(22, 7, 7);
-     box-shadow: rgb(252, 251, 250);
+     box-shadow: 0 4px 8px rgb(100, 100, 99), 0 6px 20px rgb(22, 7, 7);
 }
 
 .liveTimer{
@@ -110,6 +110,7 @@ margin-bottom: 4vw;
     font-family: 'Outfit', sans-serif;
     
     
+    
 }
 
 #sel-1{
@@ -136,4 +137,9 @@ margin-bottom: 4vw;
     border: #cad1ca;
     border-radius: 7px;
     margin-left: 3px;
+   width:35px;
+   margin-right: 3px;
+}
+.input-time:focus{
+    border: #e0cfd3;
 }
