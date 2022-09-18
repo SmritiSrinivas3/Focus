@@ -3,6 +3,8 @@ body{
     background: linear-gradient(-45deg, #9e6804, #a8304a, #23a6d5, #e656eb);
 animation: gradient 15s ease infinite;
 background-size: 400% 400%;
+overflow-y: hidden;
+overflow-x: hidden;
 }
 @keyframes gradient {
     0% {
@@ -42,8 +44,8 @@ background-size: 400% 400%;
     display: flex;
     justify-items: center;
     justify-content: space-between;
-    margin-top: none;
-    margin-bottom: auto;
+    
+    margin-bottom: 12px;
     cursor: pointer;
     
 }
@@ -96,16 +98,17 @@ margin-bottom: 4vw;
 .selection-options{
     display: inline-flex;
     margin-top: 12px;
+    font-family: 'Anton', sans-serif
     
    
 }
 .sub-button{
-    color: aliceblue;
     display: flex;
     justify-content: center;
     margin-top: 7px;
     cursor: pointer;
     font-family: 'Outfit', sans-serif;
+    
     
 }
 
@@ -117,4 +120,20 @@ margin-bottom: 4vw;
 }
 #sel-3{
     padding-right: 10px;
+}
+
+#time-selection-button{
+    background-color: #cad1ca;
+    border-color: aliceblue;
+    opacity: 0.9;
+    font-family: 'Outfit', sans-serif; 
+    height: 24px;
+    width: 68px;
+    border-radius: 12px;
+}
+
+.input-time{
+    border: #cad1ca;
+    border-radius: 7px;
+    margin-left: 3px;
 }
