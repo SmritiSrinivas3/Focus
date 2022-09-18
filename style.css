@@ -1,11 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Outfit&family=Titillium+Web:wght@200&family=Ubuntu:wght@300&display=swap');
 body{
-    background-image: url(bg3.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-   
+    background: linear-gradient(-45deg, #9e6804, #a8304a, #23a6d5, #e656eb);
+animation: gradient 15s ease infinite;
+background-size: 400% 400%;
 }
-
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 .name{
     display: flex;
     font-family: 'Outfit', sans-serif;
@@ -28,11 +37,15 @@ body{
     opacity: 0.25;
 }
 .cardGroups{
-    height: 100%;
+    height: 12%;
     width:100%;
     display: flex;
     justify-items: center;
     justify-content: space-between;
+    margin-top: none;
+    margin-bottom: auto;
+    cursor: pointer;
+    
 }
 .buttonHeadText{
     display: inline-flexbox;
@@ -53,6 +66,7 @@ margin-bottom: 4vw;
      border-radius: 12px;
      font-family: 'Anton', sans-serif; 
      font-size: 4vw;
+     border-color: aliceblue;
      
      margin-top: 20%;
      color: rgb(22, 7, 7);
@@ -64,3 +78,43 @@ margin-bottom: 4vw;
     justify-content: center;
     font-size: 4vw;
 } 
+
+.head{
+    background-color: rgba(184, 184, 221, 0.082);
+    border-radius: 12px;
+    border: 0.1px solid rgba(245, 222, 179, 0.068);
+}
+
+.selection{
+    color: aliceblue;
+    position: relative;
+   width: fit-content;
+   margin-top: 2%;
+   left: 30%;
+}
+
+.selection-options{
+    display: inline-flex;
+    margin-top: 12px;
+    
+   
+}
+.sub-button{
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    margin-top: 7px;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    
+}
+
+#sel-1{
+    padding-right: 12px;
+}
+#sel-2{
+    padding-right: 12px;
+}
+#sel-3{
+    padding-right: 10px;
+}
