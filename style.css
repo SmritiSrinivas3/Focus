@@ -107,10 +107,7 @@ margin-bottom: 4vw;
     justify-content: center;
     margin-top: 7px;
     cursor: pointer;
-    font-family: 'Outfit', sans-serif;
-    
-    
-    
+    font-family: 'Outfit', sans-serif;   
 }
 
 #sel-1{
@@ -124,7 +121,7 @@ margin-bottom: 4vw;
 }
 
 #time-selection-button{
-    background-color: #cad1ca;
+    background-color: #99be13;
     border-color: aliceblue;
     opacity: 0.9;
     font-family: 'Outfit', sans-serif; 
