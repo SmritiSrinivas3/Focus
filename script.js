@@ -34,7 +34,7 @@ function displayTime(elem) {
     elem.innerText = min < 10 && sec < 10 ? `0${min}:0${sec}`
         : min < 10 && sec >= 10 ? `0${min}:${sec}`
             : `${min}:${sec}`
-    
+
 }
 
 // stop count fucntion
@@ -48,29 +48,37 @@ function stopCount(intVar, elem) {
 
 
 function startPomodoro() {
-    time_passed_in_sec = 0
-    time_passed_in_min = Math.floor(time_passed_in_sec / 60)
-    document.getElementById('name').innerText = 'FOCUS'
-    document.getElementById('pomodoroButton').disabled = true  // to prevent multiple clicking
-    document.getElementById('time-selection-button').disabled = true // to prevent multiple submission
-    document.getElementById('smallBreakButton').disabled = true // to prevent breaks
-    document.getElementById('largeBreakButton').disabled = true // to prevent breaks
-    let pomoInt = setInterval(() => {
-        count(), displayTime(pomodoro_button_text)
-    }, 1000)
-    setTimeout(() => {
-        stopCount(pomoInt,pomodoro_button_text)
-       document.getElementById('name').innerText = 'WOAH!! YOU HAVE COMPLETED A SESSION'
-       document.getElementById('time-selection-button').disabled = false
-       document.getElementById('pomodoroButton').disabled = false
-       document.getElementById('smallBreakButton').disabled = false
-       document.getElementById('largeBreakButton').disabled = false
-    }, pomodoro_time_in_min*60*1000);
-    
+    if (pomodoro_time_in_min == 0) {
+        document.getElementById('pomodoroButton').disabled = true
+    }
+    else {
+        time_passed_in_sec = 0
+        time_passed_in_min = Math.floor(time_passed_in_sec / 60)
+        document.getElementById('name').innerText = 'FOCUS'
+        document.getElementById('pomodoroButton').disabled = true  // to prevent multiple clicking
+        document.getElementById('time-selection-button').disabled = true // to prevent multiple submission
+        document.getElementById('smallBreakButton').disabled = true // to prevent breaks
+        document.getElementById('largeBreakButton').disabled = true // to prevent breaks
+        let pomoInt = setInterval(() => {
+            count(), displayTime(pomodoro_button_text)
+        }, 1000)
+        setTimeout(() => {
+            stopCount(pomoInt, pomodoro_button_text)
+            document.getElementById('name').innerText = 'WOAH!! YOU HAVE COMPLETED A SESSION'
+            document.getElementById('time-selection-button').disabled = false
+            document.getElementById('pomodoroButton').disabled = false
+            document.getElementById('smallBreakButton').disabled = false
+            document.getElementById('largeBreakButton').disabled = false
+        }, pomodoro_time_in_min * 60 * 1000);
+    }
 
 }
 
-function startShortBreak(){
+function startShortBreak() {
+if(short_break_time_in_min == 0){
+    document.getElementById('smallBreakButton').disabled = true
+}
+else{
     time_passed_in_sec = 0
     time_passed_in_min = Math.floor(time_passed_in_sec / 60)
     document.getElementById('name').innerText = 'FOCUS'
@@ -78,20 +86,25 @@ function startShortBreak(){
     document.getElementById('time-selection-button').disabled = true // to prevent multiple submission
     document.getElementById('pomodoroButton').disabled = true
     document.getElementById('largeBreakButton').disabled = true
-    let shortBreakInt = setInterval(()=>{
+    let shortBreakInt = setInterval(() => {
         count(), displayTime(short_break_button_text)
-    },1000)
-    setTimeout(()=>{
-        stopCount(shortBreakInt,short_break_button_text)
+    }, 1000)
+    setTimeout(() => {
+        stopCount(shortBreakInt, short_break_button_text)
         document.getElementById('name').innerText = 'BREAK TIME IS OVER'
         document.getElementById('time-selection-button').disabled = false
         document.getElementById('smallBreakButton').disabled = false
         document.getElementById('pomodoroButton').disabled = false
-    document.getElementById('largeBreakButton').disabled = false
-    },short_break_time_in_min*60*1000)
+        document.getElementById('largeBreakButton').disabled = false
+    }, short_break_time_in_min * 60 * 1000)
+}
 }
 
-function startLongBreak(){
+function startLongBreak() {
+    if(long_break_time_in_min == 0){
+        document.getElementById('largeBreakButton').disabled = true
+    }
+    else{
     time_passed_in_sec = 0
     time_passed_in_min = Math.floor(time_passed_in_sec / 60)
     document.getElementById('name').innerText = 'FOCUS'
@@ -99,15 +112,16 @@ function startLongBreak(){
     document.getElementById('time-selection-button').disabled = true // to prevent multiple submission
     document.getElementById('smallBreakButton').disabled = true
     document.getElementById('pomodoroButton').disabled = true
-    let longBreakInt = setInterval(()=>{
+    let longBreakInt = setInterval(() => {
         count(), displayTime(long_break_button_text)
-    },1000)
-   setTimeout(()=>{
-    stopCount(longBreakInt,long_break_button_text)
-    document.getElementById('name').innerText = 'BREAK TIME IS OVER'
-    document.getElementById('time-selection-button').disabled = false
-    document.getElementById('smallBreakButton').disabled = false
-    document.getElementById('pomodoroButton').disabled = false
-document.getElementById('largeBreakButton').disabled = false
-   },long_break_time_in_min*60*1000)
+    }, 1000)
+    setTimeout(() => {
+        stopCount(longBreakInt, long_break_button_text)
+        document.getElementById('name').innerText = 'BREAK TIME IS OVER'
+        document.getElementById('time-selection-button').disabled = false
+        document.getElementById('smallBreakButton').disabled = false
+        document.getElementById('pomodoroButton').disabled = false
+        document.getElementById('largeBreakButton').disabled = false
+    }, long_break_time_in_min * 60 * 1000)
+}
 }
