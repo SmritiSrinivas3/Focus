@@ -1,3 +1,3 @@
 # Focus
 Pomodoro timer using HTML,CSS and Javascript
-Not completed
+<br>Background animation credits: https://www.sliderrevolution.com/resources/css-animated-background/
