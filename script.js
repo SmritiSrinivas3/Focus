@@ -47,11 +47,12 @@ function stopCount(intVar, elem) {
 
 
 
+
 function startPomodoro() {
-    if (pomodoro_time_in_min == 0) {
+    if(pomodoro_time_in_min == 0 || pomodoro_time_in_min == null){
         document.getElementById('pomodoroButton').disabled = true
-    }
-    else {
+    } 
+    else{
         time_passed_in_sec = 0
         time_passed_in_min = Math.floor(time_passed_in_sec / 60)
         document.getElementById('name').innerText = 'FOCUS'
@@ -71,14 +72,14 @@ function startPomodoro() {
             document.getElementById('largeBreakButton').disabled = false
         }, pomodoro_time_in_min * 60 * 1000);
     }
-
 }
+
 
 function startShortBreak() {
-if(short_break_time_in_min == 0){
-    document.getElementById('smallBreakButton').disabled = true
-}
-else{
+    if(short_break_time_in_min ==0 || short_break_time_in_min == null){
+        document.getElementById('smallBreakButton').disabled = true
+    }
+    else{
     time_passed_in_sec = 0
     time_passed_in_min = Math.floor(time_passed_in_sec / 60)
     document.getElementById('name').innerText = 'FOCUS'
@@ -101,8 +102,8 @@ else{
 }
 
 function startLongBreak() {
-    if(long_break_time_in_min == 0){
-        document.getElementById('largeBreakButton').disabled = true
+    if(long_break_time_in_min == 0 || long_break_time_in_min == null){
+        document.getElementById('largeBreakButton').disabled = true  
     }
     else{
     time_passed_in_sec = 0
