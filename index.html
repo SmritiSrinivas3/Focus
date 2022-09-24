@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <div class="head">
-            <div class="name">
+            <div id="name">
                 FOCUS
             </div>
             <div class="des">
@@ -41,17 +41,19 @@
             </div>
             <div id="pomodoro_button_text">START</div>
         </button>
-        <button class="button" id='smallBreakButton'>
+        <button class="button" id='smallBreakButton' onclick="startShortBreak()">
             <div class="buttonHeadText">
                 Short Break
                 <hr>
-            </div>START
+            </div>
+            <div id="short_break_button_text">START</div>
         </button>
-        <button class="button" id="largeBreakButton">
+        <button class="button" id="largeBreakButton" onclick="startLongBreak()">
             <div class="buttonHeadText">
                 Long Break
                 <hr>
-            </div>START
+            </div>
+            <div id="long_break_button_text">START</div>  
         </button>
     </div>
     </div>
